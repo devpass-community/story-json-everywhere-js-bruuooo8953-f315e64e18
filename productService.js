@@ -1,7 +1,7 @@
 async function getProduct(productId) {
     const apiUrl = `https://fakestoreapi.com/products/${productId}`;
-
-    // Add your solution here!
+    const product = apiUrl.json()
+    return product
 }
 
 module.exports = getProduct;
