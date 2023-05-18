@@ -1,6 +1,8 @@
 async function getProduct(productId) {
-    const apiUrl = await `https://fakestoreapi.com/products/${productId}`.then(response => response.json({}))
-    return apiUrl
+    const apiUrl = `https://fakestoreapi.com/products/${productId}`;
+    const response = await fetch(apiUrl)
+    const product = await response.json()
+    return product
 }
 
 module.exports = getProduct;
